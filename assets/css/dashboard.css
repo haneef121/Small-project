@@ -1,0 +1,272 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 95px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px 10px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #312439;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+.nav-sidebar{
+  color: #fff;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  padding-top: 60px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/* for toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.navbar-brand{
+    padding-top: 10px;
+    text-align: right;
+}
+.navbar-brand span{
+
+  display: block;
+  font-size: 11px;
+   line-height:10px;
+
+}
+.profileImg{
+  padding: 0 10px 0 0;
+  line-height: 40px;
+  color: #fff;
+}
+.profileImg img{
+	width: 35px;
+  margin: 8px 0 0 px;
+}
+.profileImg span{
+  display: inline-block;
+  line-height: 40px;
+}
+.sidebar .panel-default>.panel-heading{
+  color: #EABB57;
+  background: #312439;
+  border: 0px;
+  padding: 10px 0;
+}
+.sidebar .panel{
+  border: 0px;
+  box-shadow: none;
+}
+.sidebar .panel-body{
+ background: #36273f;
+ border: 0px;
+ padding: 0px;
+}
+.sidebar .panel-default>.panel-heading a{
+  font-size: 12px;
+}
+.sidebar .panel-default>.panel-heading a:hover{
+  text-decoration: none;
+}
+.nav-sidebar{
+  margin-bottom: 0px;
+}
+.sidebar .nav-sidebar a{
+  color: #dbd0e2;
+  padding: 10px 0 10px 30px;
+  background: none;
+}
+.sidebar .nav-sidebar a:hover,
+.sidebar .nav-sidebar a:focus,
+.sidebar .nav-sidebar a:active{
+  background: none;
+}
+.right{
+  float: right;
+  font-size: 13px;
+}
+.subbar{
+  font-size: 17px;
+  padding: 0  10px;
+  line-height: 45px;
+  float: left;
+  position: fixed;
+  top: 51px;
+  left: 0px;
+  right: 0px;
+  background: #fff;
+  z-index: 111;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+img {
+      border-radius: 50%;
+
+    margin-right: auto;
+   width: 30px;
+    height: 30px;
+  }
+  
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: right;
+    padding: 6px 12px;
+    
+    margin-right: 16px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.copyright{
+  margin: 0 0px 0 360px;
+  color:#999
+}
